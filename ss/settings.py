@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8x!ex1y=66pft!hkrve0xownn+^66rf#wif5+gu2!y=bju(_zh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://saviorsofthesea.com']
+ALLOWED_HOSTS = ['saviorsofthesea.com']
 
 
 # Application definition
@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'ss.wsgi.application'
 
 DATABASES = {
     'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
