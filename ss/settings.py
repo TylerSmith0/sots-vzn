@@ -33,7 +33,7 @@ if DEBUG:
 else:
     ALLOWED_HOSTS = ['saviorsofthesea.com',
                      'sots-vzn.azurewebsites.net',
-                     ]
+                     '127.0.0.1']
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     # SECURE_SSL_REDIRECT = True
@@ -133,7 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'ss/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'ss')
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'pages')]
 
