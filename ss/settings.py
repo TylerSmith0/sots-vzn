@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import dotenv, os
 
-dotenv.load_dotenv("./.env")
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,20 +22,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 if DEBUG:
     ALLOWED_HOSTS = []
+    dotenv.load_dotenv("./.env")
 else:
     ALLOWED_HOSTS = ['saviorsofthesea.com',
                      'sots-vzn.azurewebsites.net',
                      ]
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get("DJANGO_SECRET")
 
 
 # Application definition
