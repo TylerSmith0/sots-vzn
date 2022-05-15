@@ -4,25 +4,59 @@
 {% block mainbody %}
     <div id="hi">
         <div id="top1">
-            <div id="top1-1">
-                
+            <div id="top1-1" class="bg-container">
+                <!-- <div id="title-spacer"></div> -->
+                <img id='title-img' src="{% static 'pages/images/sots-text.png'%}" width="85%"/>
+                <img id="mint-button" src="{% static 'pages/images/mint-button.png' %}" width="40%"/>
             </div>
         </div>
         <div id="top2">
-            <div id="top2-1">
-
+            <div id="top2-1" class="bg-container">
+                <!-- <img id="project-summary-text" src="{% static 'pages/images/project-summary-text.png' %}" width="85%" /> -->
+                <div id="project-summary-wrapper"><p id="project-summary-text">Project Summary:</p></div>
+                <!-- <img id="project-info" src="{% static 'pages/images/info.png' %}" width="80%" /> -->
+                <img id="about-project-text" src="{% static 'pages/images/info.png' %}" width="90%"/>
+                <div id="donation-tracker-wrapper"><p id="donation-tracker">Donation Tracker: $25,000 to Date!</p></div>
             </div>
         </div>
         <div id="top3">
-            <div id="top3-1">
-
+            <div id="top3-1" class="bg-container">
+                <div id="utility-text-wrapper"><p id="utility-text">Utility:</p></div>
+                <img id="utility-about" src="{% static 'pages/images/utility.png' %}" width="90%" />
+                <div id="partner-block">
+                    <div id="partners-text-block"><p id="partners-text">Partnerships:</p></div>
+                    <div id="pt-block"><a href="https://plastictides.org" target="_blank"><img src="{% static 'pages/images/pt-logo.png' %}" width="100%" /></a></div>
+                    <div id="coral-block"><a href="https://coral.org" target="_blank"><img src="{% static 'pages/images/coral-logo.jpg' %}" width="100%"/></a></div>
+                    <div id="cc-block"><a href="https://capeclasp.com" target="_blank"><img src="{% static 'pages/images/coral-logo.jpg' %}" width="100%"/></a></div>
+                </div>
             </div>
         </div>
-        <!-- <div id="top4">
-            <div id="top4-1">
-
+        <div id="top4">
+            <div id="top4-1" class="bg-container">
+                <div id="roadmap-text-wrapper"><p id="roadmap-text">Roadmap:</p></div>
+                <div id="roadmap-block">
+                    <div class="rm" id="rm1"><img src="{% static 'pages/images/media.png' %}" width="100%"/></div>
+                    <div class="rm" id="rm2"><img src="{% static 'pages/images/donation.png' %}" width="100%"/></div>
+                    <div class="rm" id="rm3"><img src="{% static 'pages/images/metaverse.png' %}" width="100%"/></div>
+                    <div class="rm" id="rm4"><img src="{% static 'pages/images/vzn-marketplace.png' %}" width="100%"/></div>
+                    <div class="rm" id="rm5"><img src="{% static 'pages/images/p2e.png' %}" width="100%"/></div>
+                    <div class="rm" id="rm6"><img src="{% static 'pages/images/partnerships.png' %}" width="100%"/></div>
+                </div>
             </div>
         </div>
-        <div id="top5"></div> -->
+        <div id="top5">
+            <div id="top5-1" class="bg-container">
+                <div id="team-text-wrapper"><p id="team-text">Team:</p></div>
+                <div id="team-block">
+                    <div class="tm" id="tm1"><img src="{% static 'pages/images/andrew.png' %}" width="100%"/></div>
+                    <div class="tm" id="tm2"><img src="{% static 'pages/images/tyler.png' %}" width="100%"/></div>
+                    <div class="tm" id="tm3"><img src="{% static 'pages/images/sarah.png' %}" width="100%"/></div>
+                    <div class="tm" id="tm4"><img src="{% static 'pages/images/zach.png' %}" width="100%"/></div>
+                    <div class="tm" id="tm5"><img src="{% static 'pages/images/taylor.png' %}" width="100%"/></div>
+                    <div class="tm" id="tm6"><img src="{% static 'pages/images/ana.png' %}" width="100%"/></div>
+                    <!-- <div class="tm" id="tm7"><img src="{% static 'pages/images/connor.png' %}" width="100%"/></div> -->
+                </div>
+            </div>
+        </div>
     </div>
 {%endblock%}
