@@ -150,7 +150,8 @@ p{
     width: 95%;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;  
+    /* justify-content: space-evenly; */
+    justify-content: center;  
     align-items: flex-end; 
 }
 #roadmap-text{
