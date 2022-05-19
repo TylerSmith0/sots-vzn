@@ -1,0 +1,37 @@
+@font-face{
+    font-family: 'Subscribe';
+    src: local('Subscribe'),
+        url('./fonts/Subscribe.ttf') format("truetype");
+}
+p{
+    font-family: "Subscribe";
+}
+#main-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+#connect-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 20vw;
+    border: 5px red;
+    border-radius: 10vw;
+    background-color: lightblue;
+}
+#conn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  
+}
+#connect-text{
+  font-size: 6vw;
+  
+}

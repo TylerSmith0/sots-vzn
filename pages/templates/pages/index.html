@@ -1,6 +1,9 @@
 
 {% extends "pages/main.html" %}
 {% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'pages/style.css' %}">
+{% endblock %}
 {% block mainbody %}
     <div id="hi">
         <div id="top1">

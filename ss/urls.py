@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pages.views import index
+from pages.views import index, capeclasp, process, capeclaspform
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index)
+    path('', index),
+    path('capeclasp', capeclasp),
+    path('capeclasp/form', capeclaspform),
+    path('process', process)
 ]

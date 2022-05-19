@@ -1,0 +1,30 @@
+{% extends "pages/main.html" %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'pages/cc.css' %}">
+<script src="{% static 'pages/js/web3.min.js' %}"></script>
+<!-- <script src="{% static 'pages/js/walletconnect/index.min.js' %}"></script> -->
+<!-- <script src="https://unpkg.com/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script> -->
+<script src="{% static 'pages/js/walletconnect/index.min.js' %}"></script>
+<script src="{% static 'pages/js/web3modal.js' %}"></script>
+<script src="{% static 'pages/js/logic.js' %}"></script>
+{% endblock %}
+{% block mainbody %}
+<div id="main-body">
+    
+    <div id="form-wrapper">
+        <form id="form1" action="" method="post">
+            {% csrf_token %}
+            <input id="wallet" name="wallet" type="text" value="{{wallet}}" required />
+            <input id="first-name" name="first-name" type="text" required />
+            <input id="last-name" name="last-name" type="text" required />
+            <input id="email"name="email"  type="text" required />
+            <input id="order-number" name="order-number" type="text" required />
+            <input id="submit-button" name="submit" type="submit" />
+        </form>
+    </div>
+    <!-- <form id="connect-form" method="post" action="">{% csrf_token %}<input name="connecting" value="True" hidden /><button type="submit" name="connect" id="connect-button">Connect</button></form> -->
+
+
+</div>
+{% endblock %}
