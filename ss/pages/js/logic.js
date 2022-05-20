@@ -86,11 +86,11 @@ async function init() {
     if (currentAccount !== null) {
       isConnected = true;    
       // Send GET request with connected set to TRUE
-      window.location.assign(`/capeclasp/form?connected=True&wallet=${currentAccount}`);//.then(window.location.reload());
+      window.location.replace(`/capeclasp/form?connected=True&wallet=${currentAccount}`);//.then(window.location.reload());
       // xhr.send();
     } else {
       alert('Error connecting to account.');
-      window.location.assign(`/capeclasp/form?connected=False`);
+      window.location.replace(`/capeclasp/form?connected=False`);
       // xhr.send();
       // window.location.reload();
     }
