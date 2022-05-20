@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 try:
     dotenv.load_dotenv("./.env")
@@ -33,14 +33,15 @@ except:
     pass
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1',
+                    'saviorsofthesea.com',
+                    'sots-vzn.azurewebsites.net']
     
 else:
     ALLOWED_HOSTS = ['saviorsofthesea.com',
                      'sots-vzn.azurewebsites.net',
                      '127.0.0.1']
     CSRF_COOKIE_SECURE = True
-    CSRF_COOKIE_DOMAIN = ".saviorsofthesea.com"
     SESSION_COOKIE_SECURE = True
     # SECURE_SSL_REDIRECT = True
 

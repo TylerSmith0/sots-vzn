@@ -11,11 +11,6 @@ let web3;
 let contr;
 let chainId;
 const w3 = new Web3(rpcurl);
-// const Web3Modal = window.Web3Modal.default;
-// const WalletConnectProvider = new window.WalletConnectProvider.default;
-// console.log(window.WalletConnectProvider);
-
-
 
 async function init() {
   
@@ -70,12 +65,12 @@ async function init() {
   
     // Subscribe to chainId change
     provider.on("chainChanged", async (ch) => {
-      console.log(Number(ch))
+      // console.log(Number(ch))
       await refreshAccountData();
     });
   
     await refreshAccountData();
-    console.log("About to test...");
+    // console.log("About to test...");
     if (provider.isMetaMask && chainId !== 0 && chainId !== PROPER_CHAIN){
       let val = await provider.request({ method: 'wallet_switchEthereumChain', params:[{chainId: "0x" + PROPER_CHAIN.toString(16)}]});
       chainId = Number(await provider.request({method: 'eth_chainId'}));
