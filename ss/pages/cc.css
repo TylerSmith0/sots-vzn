@@ -77,3 +77,6 @@ input{margin-left: 10px;
 #submit-button{
     margin-top: 10px;
 }
+#alert{
+    order: 1;
+}

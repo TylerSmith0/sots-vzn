@@ -11,10 +11,13 @@
 {% endblock %}
 {% block mainbody %}
 <div id="main-body">
+
+    
     
     <div id="form-wrapper">
         <form id="form1" action="/capeclasp/form" method="post">
             {% csrf_token %}
+            <div id="alert"><p style="color: red; font-size: 5ea;">{{ alerts }}</p></div>
                 <div class="flex-outer">
                     <label for="wallet">Wallet:</label><input id="wallet" name="wallet" type="text" value="{{wallet}}" required />
                 </div>

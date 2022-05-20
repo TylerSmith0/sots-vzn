@@ -1,6 +1,5 @@
-import asyncio
+import pyodbc, os, asyncio
 from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse
 from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
@@ -23,7 +22,7 @@ def capeclaspform(request):
             connect = bool(request.GET["connected"])
         except:
             connect = False
-        return render(request, 'pages/capeclasp-form.html', {'wallet': walletAddr})
+        return render(request, 'pages/capeclasp-form.html', {'wallet': walletAddr, 'alerts': ""})
     
     elif request.method == 'POST' and 'submit' in request.POST:
         walletAddress = request.POST["wallet"]
@@ -37,74 +36,52 @@ def capeclaspform(request):
         except:
             pass
 
-        if (validateSubmission()):
-            print("First Name:\t"+firstName)
-            print("Last Name:\t"+lastName)
-            print("Order Number:\t"+orderNumber)
-            print("Email:\t"+email)
-            print("Wallet Addr:\t"+walletAddress)
-            # submitForm(request)
-            # return HttpResponse("Submission Received.")
+        submission, status = validateSubmission(firstName, lastName, email, orderNumber, walletAddress)
+        if (submission):
             return render(request, 'pages/valid-submission.html')
+        elif status == "quotes":
+            return render(request, 'pages/capeclasp-form.html', {'wallet': walletAddress, 'alerts': "Please remove all single and double quotes from entries."})
         else:
-            return render(request, 'pages/invalid-submission.html')
+            return render(request, 'pages/invalid-submission.html', {'status': status})
 
 
-# @csrf_protect
-# def capeclasp(request):
-#     if request.method == 'GET':
-#         if 'connected' in request.GET:
-#             print("connected is there")
-#             try:
-#                 walletAddr = request.GET["wallet"]
-                
-#             except:
-#                 walletAddr = ""
+def validateSubmission(f, l, e, o, w):
 
-#             try:
-#                 connect = bool(request.GET["connected"])
-#             except:
-#                 connect = False
+    if f is None:
+        return (False, "firstname")
+    elif l is None:
+        return (False, "lastname")
+    elif e is None:
+        return (False, "email")
+    elif o is None:
+        return (False, "order")
+    elif w is None:
+        return (False, "wallet")
 
-#             print(f"Received: {walletAddr}")
-#             print(f"Connected? {connect}")
-#             return render(request, 'pages/capeclasp-form.html', context={'connected':connect, 'wallet':walletAddr})
-#         else:
-#             print('nope not here')
-#             return render(request, 'pages/capeclasp-connect.html', context={'connected':False})
-    
-#     elif request.method == 'POST' and 'submit' in request.POST:
-#         walletAddress = ""
-#         firstName = request.POST["first-name"]
-#         lastName = request.POST["last-name"]
-#         email = request.POST["email"]
-#         orderNumber = request.POST["order-number"]
-        
-#         try:
-#             walletAddress = request.POST["wallet-address"]
-#         except:
-#             pass
+    if "'" in f or '"' in f:
+        return (False, "quotes")
+    elif "'" in l or '"' in l:
+        return (False, "quotes")
+    elif "'" in e or '"' in e:
+        return (False, "quotes")
+    elif "'" in o or '"' in o:
+        return (False, "quotes")
+    elif "'" in w or '"' in w:
+        return (False, "quotes")
 
-#         if (validateSubmission()):
-#             print("First Name:\t"+firstName)
-#             print("Last Name:\t"+lastName)
-#             print("Order Number:\t"+orderNumber)
-#             print("Email:\t"+email)
-#             print("Wallet Addr:\t"+walletAddress)
-#             # submitForm(request)
-#             # return HttpResponse("Submission Received.")
-#             return render(request, 'pages/valid-submission.html')
-#         else:
-#             return render(request, 'pages/invalid-submission.html')
+    ## Check if entry exists
+    try:
+        conn=pyodbc.connect(os.environ.get("DB_CONN_STRING"))
+    except:
+        return (False, "internal-connection")
+    # try:
+    try:
+        c = conn.cursor()
+        c.execute(f"INSERT INTO {os.environ.get('DB_TABLE')} VALUES ('{f}', '{l}', '{o}', '{e}', '{w}');")
+        c.commit()
+        conn.close()
+    except:
+        conn.close()
+        return (False, "internal-connection-query")
 
-#     elif request.method == 'GET' and 'wallet' in request.GET:
-        
-        
-#         return render(request, 'pages/capeclasp.html')
-    
-def process():
-    print('we made it to process! hooray!')
-
-def validateSubmission():
-    print("This is where we validate")
-    return True
+    return (True, "submission")
