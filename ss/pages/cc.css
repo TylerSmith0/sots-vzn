@@ -48,7 +48,7 @@ p, input, label{
     align-items: flex-start;
     flex-direction: column;
     list-style-type: none;
-    font-size: 4vw;
+    font-size: 4vh;
 }
 
 input{margin-left: 10px;

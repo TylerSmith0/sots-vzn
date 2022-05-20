@@ -15,7 +15,6 @@
     <div id="form-wrapper">
         <form id="form1" action="/capeclasp/form" method="post">
             {% csrf_token %}
-            <ul class="flex-outer">
                 <div class="flex-outer">
                     <label for="wallet">Wallet:</label><input id="wallet" name="wallet" type="text" value="{{wallet}}" required />
                 </div>
@@ -34,10 +33,8 @@
                 <div class="flex-outer" style="margin-top: 10px;">
                     <input id="submit-button" name="submit" type="submit" />
                 </div>
-            </ul>
         </form>
     </div>
-    <!-- <form id="connect-form" method="post" action="">{% csrf_token %}<input name="connecting" value="True" hidden /><button type="submit" name="connect" id="connect-button">Connect</button></form> -->
 
 
 </div>

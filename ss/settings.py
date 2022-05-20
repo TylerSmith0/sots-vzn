@@ -40,6 +40,7 @@ else:
                      'sots-vzn.azurewebsites.net',
                      '127.0.0.1']
     CSRF_COOKIE_SECURE = True
+    CSRF_COOKIE_DOMAIN = ".saviorsofthesea.com"
     SESSION_COOKIE_SECURE = True
     # SECURE_SSL_REDIRECT = True
 

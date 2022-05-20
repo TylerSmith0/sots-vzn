@@ -3,16 +3,11 @@ from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 from django.views.decorators.csrf import csrf_protect
 
-
-def submitForm(request):
-    print(request.POST)
-    # return render(request, 'pages/index.html')
-
 # Create your views here.
 def index(request):
     return render(request, 'pages/index.html')
 
-@csrf_protect
+
 def capeclasp(request):
     if request.method == 'GET':
         return render(request, 'pages/capeclasp-connect.html')
@@ -28,7 +23,6 @@ def capeclaspform(request):
             connect = bool(request.GET["connected"])
         except:
             connect = False
-        print(walletAddr)
         return render(request, 'pages/capeclasp-form.html', {'wallet': walletAddr})
     
     elif request.method == 'POST' and 'submit' in request.POST:
