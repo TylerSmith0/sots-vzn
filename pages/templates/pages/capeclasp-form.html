@@ -15,12 +15,26 @@
     <div id="form-wrapper">
         <form id="form1" action="" method="post">
             {% csrf_token %}
-            <input id="wallet" name="wallet" type="text" value="{{wallet}}" required />
-            <input id="first-name" name="first-name" type="text" required />
-            <input id="last-name" name="last-name" type="text" required />
-            <input id="email"name="email"  type="text" required />
-            <input id="order-number" name="order-number" type="text" required />
-            <input id="submit-button" name="submit" type="submit" />
+            <ul class="flex-outer">
+                <div class="flex-outer">
+                    <label for="wallet">Wallet:</label><input id="wallet" name="wallet" type="text" value="{{wallet}}" required />
+                </div>
+                <div class="flex-outer">
+                    <label for="first-name">First Name:</label><input id="first-name" name="first-name" type="text" required />
+                </div>
+                <div class="flex-outer">
+                    <label for="last-name">Last Name:</label><input id="last-name" name="last-name" type="text" required />
+                </div>
+                <div class="flex-outer">
+                    <label for="email">Email:</label><input id="email"name="email"  type="text" required />
+                </div>
+                <div class="flex-outer">
+                    <label for="order-number">Order Number:</label><input id="order-number" name="order-number" type="text" required />
+                </div>
+                <div class="flex-outer" style="margin-top: 10px;">
+                    <input id="submit-button" name="submit" type="submit" />
+                </div>
+            </ul>
         </form>
     </div>
     <!-- <form id="connect-form" method="post" action="">{% csrf_token %}<input name="connecting" value="True" hidden /><button type="submit" name="connect" id="connect-button">Connect</button></form> -->

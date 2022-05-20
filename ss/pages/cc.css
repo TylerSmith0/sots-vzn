@@ -3,7 +3,7 @@
     src: local('Subscribe'),
         url('./fonts/Subscribe.ttf') format("truetype");
 }
-p{
+p, input, label{
     font-family: "Subscribe";
 }
 #main-body{
@@ -34,4 +34,46 @@ p{
 #connect-text{
   font-size: 6vw;
   
+}
+
+#form-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.flex-outer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 4vw;
+}
+
+input{margin-left: 10px;
+    margin-bottom: 10px;}
+
+#wallet{
+    order: 1;
+    align-self: flex-end;
+    
+}
+#first-name{
+    order: 2;
+}
+
+#last-name{
+    order: 3;
+}
+
+#email{
+    order: 4;
+}
+
+#order-number{
+    order: 5;
+}
+#submit-button{
+    margin-top: 10px;
 }
