@@ -107,6 +107,18 @@ DATABASES = {
     	'ENGINE': 'django.db.backends.sqlite3',
     	'NAME': BASE_DIR / 'db.sqlite3',
 	}
+    # 'default': {
+    #     'ENGINE': 'sql_server.pyodbc',
+    #      'NAME': os.environ.get("DB_NAME"),
+    #      'USER': os.environ.get("DB_USER"),
+    #      'PASSWORD': os.environ.get("DB_PASSWORD"),
+    #      'HOST': os.environ.get("DB_HOST"),
+    #      'PORT': '1443',
+    #      'OPTIONS': {
+    #          'driver': 'ODBC Driver 13 for SQL Server',
+    #          'MARS_Connection': 'True',
+    #      }
+    # }
 }
 
 

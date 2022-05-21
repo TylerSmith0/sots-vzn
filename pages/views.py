@@ -72,8 +72,8 @@ def validateSubmission(f, l, e, o, w):
     ## Check if entry exists
     try:
         conn=pyodbc.connect(os.environ.get("DB_CONN_STRING"))
-    except:
-        return (False, "internal-connection")
+    except e:
+        return (False, e)
     # try:
     try:
         c = conn.cursor()
