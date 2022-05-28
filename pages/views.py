@@ -1,4 +1,4 @@
-import pyodbc, os, asyncio
+import mysql.connector, os, asyncio
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 
@@ -71,14 +71,20 @@ def validateSubmission(f, l, e, o, w):
 
     ## Check if entry exists
     try:
-        conn=pyodbc.connect(os.environ.get("DB_CONN_STRING"))
+        conn=mysql.connector.connect(user=os.environ.get("DB_USER"),
+                                     password=os.environ.get("DB_PASSWORD"),
+                                     host=os.environ.get("DB_HOST"),
+                                     database=os.environ.get("DB_NAME"))
     except e:
         return (False, e)
     # try:
     try:
         c = conn.cursor()
-        c.execute(f"INSERT INTO {os.environ.get('DB_TABLE')} VALUES ('{f}', '{l}', '{o}', '{e}', '{w}');")
-        c.commit()
+        # print("Cursor created")
+        c.execute(f"INSERT INTO `{os.environ.get('DB_TABLE')}` VALUES ('{f}', '{l}', '{o}', '{e}', '{w}');")
+        # print("executed function")
+        conn.commit()
+        # print("committed function")
         conn.close()
     except:
         conn.close()
