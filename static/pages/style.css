@@ -6,6 +6,7 @@
 p{
     font-family: "Subscribe";
 }
+
 #hi {
     /* display: flex;
     flex-direction: column;
@@ -81,6 +82,78 @@ p{
     margin-left: calc(100vw * 0.05);
     text-align: left;
 }
+#project-summary-image-div{
+    order: 2;
+    align-self: left;
+    display: flex;
+    background-image: url('images/info.png');
+    background-size: cover;
+    width: 90%;
+    height: calc(90vw * (765/1921));
+    /* margin-top: calc(100vw * (1601 / 1920) * -0.1); 10% margin from top of div element */
+
+}
+#project-summary-div-text{
+    order: 1;
+    position: relative;
+    top: 26.5%;
+    left: 14%;
+    font-size: 3vw;
+    text-align: left;
+    line-height: 1.2em;
+    color: white;
+}
+#utility-summary-image-div{
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url('images/utility.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: calc(100vw * (874/1920)); 
+    padding: 4vw 4vw 4vw 4vw;
+    margin-top: calc(100vw * (1896 / 1920) * -0.04); /*10% margin from top of div element*/
+}
+#col1{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#col2{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/* #utility-summary-div-text{
+    order: 1;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 1.5em;
+    color: white;
+} */
+.ut{color: white; font-size: 3.25vw; line-height: 1.25em; text-align: center;}
+#u1{order: 1;}
+#u2{order: 2;}
+#u3{order: 3;}
+#u4{order: 4;}
+#u5{order: 5;}
+#u6{order: 6;}
+#u7{order: 7;}
+#u8{order: 8;}
+#u9{order: 9;}
+#u10{order: 10;}
+
+#br-span{
+    display: block;
+    margin-bottom: -2em;   
+}
 #utility-text{
     order: 1;
     font-size: 8vw;
@@ -89,25 +162,29 @@ p{
     text-align: left;
 }
 #donation-tracker{
-    order: 1;
+    order: 2;
     font-size: 6vw;
     margin-bottom: calc(100vw * (1601 / 1920) * 0.1); /* 10% margin from top of div element */
     text-align: center;
 }
 #donation-tracker-wrapper{
+    order: 3;
     width: 100%;
 }
 #project-info{
     order: 2;
 }
 #project-summary-wrapper{
+    order: 1;
     width: 100%;
 }
 #utility-text-wrapper{
     width: 100%;
+    order: 1;
 }
 #partner-block{
     display: flex;
+    order: 3;
     width: 90%;
     align-items: baseline;
     justify-content: space-between;
@@ -135,7 +212,10 @@ p{
     width: 15%;
 }
 .rm{
-    width: 25vw;
+    width: 40vw;
+    color: white;
+    font-size: 5vw;
+    text-align: center;
 }
 #rm1{ order: 1;}
 #rm2{ order: 2;}
@@ -144,6 +224,8 @@ p{
 #rm5{ order: 5;}
 #rm6{ order: 6;}
 #rm7{ order: 7;}
+#rm8{ order: 8;}
+#rm9{ order: 9;}
 #roadmap-block{
     order: 1;
     display: flex;
@@ -151,8 +233,8 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
-    justify-content: center;  
-    align-items: flex-end; 
+    justify-content: space-evenly;  
+    align-items: center; 
 }
 #roadmap-text{
     order: 1;
@@ -192,4 +274,20 @@ p{
 }
 #team-text-wrapper{
     width: 100%;
+}
+a.roadmap-link{
+    text-decoration: none;
+    color: white;
+}
+a.roadmap-link:link{
+    text-decoration: none;
+    color: white;
+}
+a.roadmap-link:visited{
+    text-decoration: none;
+    color: white;
+}
+a.roadmap-link:hover{
+    text-decoration: none;
+    color: gray;
 }
