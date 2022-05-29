@@ -3,16 +3,15 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
-def index(request):
+async def index(request):
     return render(request, 'pages/index.html')
 
-
-def capeclasp(request):
+async def capeclasp(request):
     if request.method == 'GET':
         return render(request, 'pages/capeclasp-connect.html')
 
-@csrf_protect
-def capeclaspform(request):
+# @csrf_protect
+async def capeclaspform(request):
     if request.method == 'GET':
         try:
             walletAddr = request.GET["wallet"]
@@ -36,7 +35,7 @@ def capeclaspform(request):
         except:
             pass
 
-        submission, status = validateSubmission(firstName, lastName, email, orderNumber, walletAddress)
+        submission, status = await validateSubmission(firstName, lastName, email, orderNumber, walletAddress)
         if (submission):
             return render(request, 'pages/valid-submission.html')
         elif status == "quotes":
@@ -45,7 +44,7 @@ def capeclaspform(request):
             return render(request, 'pages/invalid-submission.html', {'status': status})
 
 
-def validateSubmission(f, l, e, o, w):
+async def validateSubmission(f, l, e, o, w):
 
     if f is None:
         return (False, "firstname")
