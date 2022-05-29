@@ -1,12 +1,24 @@
 {% extends "pages/main.html" %}
 {% load static %}
 {% block stylesheets %}
-
+<link rel="stylesheet" type="text/css" href="{% static 'pages/cc-conf.css' %}">
 {% endblock %}
 {% block mainbody %}
 <div id="main">
-    <h2 id="header">Alright! You're Confirmed!</h2>
+    <h2 id="header">Alright! We've got your Address!</h2>
+    
+    <p class="conf-text">We're still working to perfect our art, so it won't be immediate when you get your NFT.</p>
+
+    <p class="conf-text">But, we'll be sure to let you know as soon as the NFTs are airdropped!</p>
+
+    <p class="conf-text">In the meantime, feel free to check out our Discord and Twitter accounts:</p>
+    <div id="socials-box">
+
+        <!-- Discord image -->
+
+        <!-- Twitter image -->
+
+    </div>
 
 </div>
-<p>Hooray! It's valid!</p>
 {% endblock %}

@@ -6,12 +6,21 @@
 p, input, label{
     font-family: "Subscribe";
 }
+.text{
+    font-size: 3vw;
+    
+}
 #main-body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-image: url('images/conn-bg.png');
+    background-size: cover;
+    background-position: bottom;
+
 }
 #connect-wrapper{
     display: flex;
@@ -19,21 +28,23 @@ p, input, label{
     align-items: center;
     width: 40vw;
     height: 20vw;
-    border: 5px red;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
     border-radius: 10vw;
     background-color: lightblue;
+    margin-bottom: 5vh;
 }
 #conn{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  text-align: center;
   height: 100%;
   width: 100%;
-  
 }
 #connect-text{
   font-size: 6vw;
-  
 }
 
 #form-wrapper{
@@ -41,6 +52,12 @@ p, input, label{
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    padding: 2vh 2vw 2vh 2vw;
+    background-color: rgba(196, 196, 196, 0.773);
 }
 .flex-outer{
     display: flex;
@@ -79,4 +96,21 @@ input{margin-left: 10px;
 }
 #alert{
     order: 1;
+}
+
+a.conn-link{
+    text-decoration: underline;
+    color: black;
+}
+a.conn-link:link{
+    text-decoration: underline;
+    color: black;
+}
+a.conn-link:visited{
+    text-decoration: underline;
+    color: black;
+}
+a.conn-link:hover{
+    text-decoration: underline;
+    color: gray;
 }

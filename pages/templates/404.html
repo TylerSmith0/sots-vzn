@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Not Found</title>
-</head>
-<body>
+{% extends "pages/main.html" %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'pages/errors.css' %}">
+{% endblock %}
+{% block mainbody %}
+<div id="main">
+    <h2 id="header">Uh oh!</h2>
+    <p class="text">Looks like this page doesn't exist. Sorry about that!</p>
+    <div id="404-img">
 
-<h1>Uh oh!</h1>
-<p>Looks like this page doesn't exist. Sorry about that!</p>
+        <!-- Sad Angler Fish image -->
 
-</body>
-</html>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,8 +1,12 @@
 {% extends "pages/main.html" %}
 {% load static %}
 {% block stylesheets %}
-
+<link rel="stylesheet" type="text/css" href="{% static 'pages/cc-inv.css' %}">
 {% endblock %}
 {% block mainbody %}
-<p> Sorry :-( The issue code is {{status}}</p>
+<div id="main">
+    <h2 id="header">It's not you, it's us...</h2>
+    <p class="text">Looks like we're having some internal server errors. We're so sorry about that!</p>
+    <p class="text">Please try submitting your entry again, or email <a class="email-link" href="mailto:info@vznllc.com">info@vznllc.com</a> directly if you're still struggling to get the form to take.</p>
+</div>
 {% endblock %}
