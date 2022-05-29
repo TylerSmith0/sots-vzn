@@ -1,1 +1,1 @@
-hypercorn ss.asgi:application
+hypercorn ss.asgi:application --bind localhost:443 --bind localhost:80
