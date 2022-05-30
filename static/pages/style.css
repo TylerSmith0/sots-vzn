@@ -73,7 +73,7 @@ p{
     margin-top: calc(100vw * (1464 / 1920) * 0.1); /* 10% margin from top of div element */
 }
 #mint-button{
-    order: 2;
+    order: 1;
 }
 #project-summary-text{
     order: 1;
@@ -127,6 +127,13 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+#link-wrapper{
+    order: 2;
+    display: inline;
+    text-align: center;
+    /* align-content: center;
+    justify-content: space-evenly; */
 }
 /* #utility-summary-div-text{
     order: 1;
