@@ -26,6 +26,7 @@ p, input, label, h2{
     background-position: bottom;
 
     height: 100vh;
+    padding: 5% 5% 5% 5%;
 }
 
 #header{
