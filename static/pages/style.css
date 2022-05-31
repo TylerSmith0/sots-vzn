@@ -113,7 +113,8 @@ p{
     background-repeat: no-repeat;
     width: 100%;
     height: calc(100vw * (874/1920)); 
-    padding: 4vw 4vw 4vw 4vw;
+    /* padding: 4vw 4vw 4vw 4vw; */
+    padding: 15% 5% 15% 5%;
     margin-top: calc(100vw * (1896 / 1920) * -0.04); /*10% margin from top of div element*/
 }
 #col1{
@@ -145,17 +146,17 @@ p{
     line-height: 1.5em;
     color: white;
 } */
-.ut{color: white; font-size: 3.25vw; line-height: 1.25em; text-align: center;}
-#u1{order: 1;}
-#u2{order: 2;}
-#u3{order: 3;}
-#u4{order: 4;}
-#u5{order: 5;}
-#u6{order: 6;}
-#u7{order: 7;}
-#u8{order: 8;}
-#u9{order: 9;}
-#u10{order: 10;}
+.ut{color: white; font-size: 3.25vw; line-height: 2vw; text-align: center;}
+#u1{order: 1; margin-top: 2%;}
+#u2{order: 2; margin-top: 2%;}
+#u3{order: 3; margin-top: 2%;}
+#u4{order: 4; margin-top: 2%;}
+#u5{order: 5; margin-top: 2%;}
+#u6{order: 6; margin-top: 2%;}
+#u7{order: 7; margin-top: 2%;}
+#u8{order: 8; margin-top: 2%;}
+#u9{order: 9; margin-top: 2%;}
+#u10{order: 10; margin-top: 2%;}
 
 #br-span{
     display: block;
