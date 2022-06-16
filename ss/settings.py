@@ -35,11 +35,13 @@ except:
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1',
                     'saviorsofthesea.com',
-                    'sots-vzn.azurewebsites.net']
+                    'sots-vzn.azurewebsites.net',
+                    'test-sots-vzn.azurewebsites.net']
     
 else:
     ALLOWED_HOSTS = ['saviorsofthesea.com',
                      'sots-vzn.azurewebsites.net',
+                     'test-sots-vzn.azurewebsites.net',
                      '127.0.0.1']
     CSRF_COOKIE_SECURE = True
     CSRF_TRUSTED_ORIGINS = ["https://saviorsofthesea.com",

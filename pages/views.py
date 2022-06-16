@@ -90,3 +90,7 @@ async def validateSubmission(f, l, e, o, w):
         return (False, "internal-connection-query")
 
     return (True, "submission")
+
+
+async def claim(request):
+    return render(request, 'pages/claim.html')
