@@ -3,8 +3,14 @@
     src: local('Subscribe'),
         url('./fonts/Subscribe.ttf') format("truetype");
 }
-p{
+p, h2{
     font-family: "Subscribe";
+}
+
+#claim-text{
+    font-size: 6vw;
+    padding: 30px 0px 0px 0px;
+    color: white;
 }
 
 #hi {
@@ -70,7 +76,7 @@ p{
 }
 #title-img{
     order: 1;
-    margin-top: calc(100vw * (1464 / 1920) * 0.1); /* 10% margin from top of div element */
+    margin-top: calc(100vw * (1464 / 1920) * 0.05); /* 10% margin from top of div element */
 }
 #mint-button{
     order: 1;
