@@ -1,6 +1,6 @@
 import mysql.connector, os, asyncio
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_protect, requires_csrf_token
 
 # Create your views here.
 async def index(request):
@@ -10,7 +10,7 @@ async def capeclasp(request):
     if request.method == 'GET':
         return render(request, 'pages/capeclasp-connect.html')
 
-# @csrf_protect
+@requires_csrf_token
 async def capeclaspform(request):
     if request.method == 'GET':
         try:
