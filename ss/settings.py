@@ -49,7 +49,9 @@ else:
     CSRF_TRUSTED_ORIGINS = ["https://saviorsofthesea.com",
                             "http://saviorsofthesea.com",
                             "https://www.saviorsofthesea.com",
-                            "http://www.saviorsofthesea.com"]
+                            "http://www.saviorsofthesea.com",
+                            "https://test-sots-vzn.azurewebsites.net",
+                            "http://test-sots-vzn.azurewebsites.net"]
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_DOMAIN = ".saviorsofthesea.com"
     # SECURE_SSL_REDIRECT = True
