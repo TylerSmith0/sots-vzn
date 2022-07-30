@@ -34,16 +34,25 @@ except:
 
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1',
+                    'www.saviorsofthesea.com',
                     'saviorsofthesea.com',
-                    'sots-vzn.azurewebsites.net']
+                    'sots-vzn.azurewebsites.net',
+                    'test-sots-vzn.azurewebsites.net']
     
 else:
     ALLOWED_HOSTS = ['saviorsofthesea.com',
+                     'www.saviorsofthesea.com',
                      'sots-vzn.azurewebsites.net',
+                     'test-sots-vzn.azurewebsites.net',
                      '127.0.0.1']
-    CSRF_COOKIE_SECURE = True
+    # CSRF_COOKIE_SECURE = True
+    # CSRF_COOKIE_DOMAIN = '.saviorsofthesea.com'
     CSRF_TRUSTED_ORIGINS = ["https://saviorsofthesea.com",
-                            "http://saviorsofthesea.com"]
+                            "http://saviorsofthesea.com",
+                            "https://www.saviorsofthesea.com",
+                            "http://www.saviorsofthesea.com",
+                            "https://test-sots-vzn.azurewebsites.net",
+                            "http://test-sots-vzn.azurewebsites.net"]
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_DOMAIN = ".saviorsofthesea.com"
     # SECURE_SSL_REDIRECT = True
