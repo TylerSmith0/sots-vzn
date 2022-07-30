@@ -74,6 +74,7 @@ INSTALLED_APPS = [
 
     # custom
     'pages',
+    'games',
 ]
 
 MIDDLEWARE = [

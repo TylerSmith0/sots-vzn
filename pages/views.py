@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_protect, requires_csrf_token
 async def index(request):
     return render(request, 'pages/index.html')
 
+async def game(request):
+    return render(request, 'pages/game.html')
+
 async def capeclasp(request):
     if request.method == 'GET':
         return render(request, 'pages/capeclasp-connect.html')
