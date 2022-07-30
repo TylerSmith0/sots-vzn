@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pages.views import index, capeclasp, capeclaspform, claim
+from pages.views import capeclasp, capeclaspform, claim
+from games.views import clumsyclam
+import pages
+import games
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', pages.views.index),
     path('capeclasp', capeclasp),
     path('capeclasp/form', capeclaspform),
-    path('claim', claim)
+    path('claim', claim),
+    # path('games', games.views.index),
+    path('games/clumsyclam', clumsyclam)
 ]

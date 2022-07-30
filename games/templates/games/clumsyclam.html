@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Clumsy Clam</title>
+        <!-- <link rel="apple-touch-icon-precomposed" href="data/img/touch-icon-iphone.png"/> -->
+        <!-- <link rel="apple-touch-icon-precomposed" sizes="120x120" href="data/img/touch-icon-iphone-retina.png"/> -->
+        <link rel="shortcut icon" href="{% static 'games/data/img/favicon.ico'%}">
+        <link rel="stylesheet" type="text/css" media="screen" href="{%static 'games/game.css'%}">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Clumsy Clam">
+        <meta charset="UTF-8" />
+        <meta name="description" content="Clumsy Clam - A P2E Freelist Browser Game"/>
+        <meta name="keywords" content="clumsyclam, clumsy, clam, nft, web3, game, html5"/>
+        <meta name="robots" content="index, follow">
+        <meta property="og:title" content="Clumsy Clam - A P2E Freelist Browser Game"/>
+        <meta property="og:url" content="https://saviorsofthesea.com"/>
+        <meta property="og:site_name" content="Clumsy Clam"/>
+
+        <!-- Twitter Card -->
+        <meta name="twitter:hashtag" content="clumsyclam" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@SaviorsOfTheSea" />
+        <meta name="twitter:creator" content="@TylerSmith_0" />
+        <meta name="twitter:title" content="Clumsy Clam" />
+        <meta name="twitter:description" content="A P2E Freelist Browser Game" />
+
+        <!-- Scripts -->
+        <script src="{%static 'games/data/js/web3.min.js'%}"></script>
+        <script src="{% static 'games/data/js/walletconnect/index.min.js'%}"></script>
+        <script src="{% static 'games/data/js/web3modal.js'%}"></script>
+        <script src="{% static 'games/data/js/connect.js' %}"></script>
+    </head>
+
+    <body>
+
+        <!-- Canvas placeholder -->
+        <div id="screen">
+            <div id="conn" onclick='onConnect();'><p id="connect-text">Connect Wallet</p></div>
+        </div>
+
+        <!-- melonJS Library -->
+        <script type="text/javascript" src="{% static 'games/js/melonJS-min.js'%}" ></script>
+        <script type="text/javascript" src="{% static 'games/build/clumsy-min.js'%}" ></script>
+        <span id="acc"></span>
+    </body>
+</html>
