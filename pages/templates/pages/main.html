@@ -7,12 +7,45 @@
     <title>Saviors of the Sea</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{% static 'boot/css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'boot/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/main.css'%}" />
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'home/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'home/js/popper.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
     {% block stylesheets %}{% endblock %}
     
 </head>
 <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light nav nav-text" style="background-color: #fefce1;">
+        <a class="navbar-brand nav-title" href="/">Saviors of the Sea</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto nav" style="width: 100%;">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/capeclasp">Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/games/clumsyclam">Play</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/claim">Claim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://shop.vznllc.com/" target="#blank">Mint</a>
+              </li>
+            
+        </div>
+      </nav>
 {% block mainbody %}
 
 {% endblock %}

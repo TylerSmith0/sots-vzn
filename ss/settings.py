@@ -45,11 +45,13 @@ else:
                      'sots-vzn.azurewebsites.net',
                      'test-sots-vzn.azurewebsites.net',
                      '127.0.0.1']
-    CSRF_COOKIE_SECURE = True
+    # CSRF_COOKIE_SECURE = True
+    # CSRF_COOKIE_DOMAIN = '.saviorsofthesea.com'
     CSRF_TRUSTED_ORIGINS = ["https://saviorsofthesea.com",
                             "http://saviorsofthesea.com",
                             "https://www.saviorsofthesea.com",
                             "http://www.saviorsofthesea.com"]
+
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_DOMAIN = ".saviorsofthesea.com"
     # SECURE_SSL_REDIRECT = True
@@ -71,6 +73,7 @@ INSTALLED_APPS = [
 
     # custom
     'pages',
+    'games',
 ]
 
 MIDDLEWARE = [

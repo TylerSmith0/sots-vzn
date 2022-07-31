@@ -1,0 +1,22 @@
+@font-face{
+    font-family: 'Subscribe';
+    src: local('Subscribe'),
+        url('./fonts/Subscribe.ttf') format("truetype");
+}
+.nav{
+    font-family: 'Subscribe';
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-title{
+    font-family: 'Subscribe';
+    color: black;
+    font-size: 3vw;
+    padding-left: 15px;
+}
+.nav-text{
+    font-family: 'Subscribe';
+    color: gray;
+    font-size: 3vw;
+}
